@@ -1,0 +1,33 @@
+{
+  "name": "summaly-lambda",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "node ./scripts/post-install.js",
+    "build": "node ./scripts/build.js",
+    "serve": "node ./scripts/serve.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "deploy": "pnpm run build && zip -FS -r function.zip built package.json && aws lambda update-function-code --function-name summaly-lambda --zip-file fileb://function.zip --architectures arm64 --no-cli-pager"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.11.1",
+    "@stylistic/eslint-plugin": "^2.6.4",
+    "@types/aws-lambda": "^8.10.137",
+    "@types/node": "^20.12.5",
+    "esbuild": "^0.23.1",
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0",
+    "typescript": "^5.4.4",
+    "typescript-eslint": "^8.2.0"
+  },
+  "dependencies": {
+    "@googleapis/youtube": "^16.1.0",
+    "@misskey-dev/summaly": "^5.1.0",
+    "cheerio": "1.0.0-rc.12",
+    "debug": "^4.3.4",
+    "hono": "^4.2.2"
+  },
+  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
+}

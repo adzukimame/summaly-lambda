@@ -1,0 +1,43 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    permissions:
+      id-token: write
+      contents: read
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.16.0]
+
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - name: Build
+        run: pnpm run build
+      - name: Zip
+        run: zip -FS -r function.zip built package.json
+      - name: Setup AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          mask-aws-account-id: true
+      - name: Deploy
+        run: aws lambda update-function-code --function-name summaly-lambda --zip-file fileb://function.zip --architectures arm64 --no-cli-pager > /dev/null 2>&1
