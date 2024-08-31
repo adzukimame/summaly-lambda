@@ -108,7 +108,7 @@ export const app = new Hono();
 app.get('*', async (ctx) => {
   const url = ctx.req.query('url');
 
-  if (url === undefined) {
+  if (url === undefined || !URL.canParse(url)) {
     return ctx.body('url is required', 400);
   }
 
