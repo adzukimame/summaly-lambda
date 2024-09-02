@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@googleapis/youtube':
-        specifier: ^16.1.0
-        version: 16.1.0
+        specifier: ^20.0.0
+        version: 20.0.0
       '@misskey-dev/summaly':
         specifier: ^5.1.0
         version: 5.1.0
@@ -372,8 +372,8 @@ packages:
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@googleapis/youtube@16.1.0':
-    resolution: {integrity: sha512-Zqi7iqk/XUnpOvY3g/6nw1ovbpAkOqlL+9qmjtPkxiCRPKzjpjF45MYDbu0VXm/r8w88VJxMSmcuXUe547ljoQ==}
+  '@googleapis/youtube@20.0.0':
+    resolution: {integrity: sha512-wdt1J0JoKYhvpoS2XIRHX0g/9ul/B0fQeeJAhuuBIdYINuuLt6/oZYZZCBmkuhtkA3IllXgqgAXOjLtLRAnR2g==}
     engines: {node: '>=12.0.0'}
 
   '@hono/node-server@1.12.2':
@@ -1705,7 +1705,7 @@ snapshots:
 
   '@eslint/object-schema@2.1.4': {}
 
-  '@googleapis/youtube@16.1.0':
+  '@googleapis/youtube@20.0.0':
     dependencies:
       googleapis-common: 7.2.0
     transitivePeerDependencies:
