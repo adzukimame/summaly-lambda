@@ -5,6 +5,7 @@ import { summaly } from '@misskey-dev/summaly';
 import type { SummalyPlugin } from '@misskey-dev/summaly';
 import { youtube } from '@googleapis/youtube';
 import { load as cheerioLoad } from 'cheerio';
+import { decode as decodeHtml } from 'html-entities';
 
 let disabledHostnames: string[] = [];
 
@@ -18,6 +19,16 @@ if (process.env.DISABLED_HOSTNAMES) {
   catch {
     // nop
   }
+}
+
+function clip(s: string, max: number) {
+  if (s == null || s.trim() === '') {
+    return s;
+  }
+
+  s = s.trim();
+
+  return s.length > max ? s.substring(0, max) + '...' : s;
 }
 
 const youtubeApiKey = process.env.YOUTUBE_API_KEY;
@@ -78,12 +89,16 @@ const plugins = [
       const playerHeight = $ ? $('iframe').attr('height') : null;
 
       return {
-        title: detail.snippet?.title ?? null,
+        title: detail.snippet?.title ? clip(decodeHtml(detail.snippet.title), 100) : null,
         icon: 'https://www.youtube.com/favicon.ico',
-        description: detail.snippet?.description ?? null,
+        description: detail.snippet?.description ? clip(decodeHtml(detail.snippet.description.replace(/\n/g, '')), 157) : null,
         thumbnail: detail.snippet?.thumbnails?.maxres?.url ?? null,
         player: {
-          url: playerUrl ? `https:${playerUrl}` : null,
+          url: playerUrl
+            ? playerUrl.startsWith('http://')
+              ? `https:${playerUrl.substring(5)}`
+              : `https:${playerUrl}`
+            : null,
           width: playerWidth ? parseInt(playerWidth) : null,
           height: playerHeight ? parseInt(playerHeight) : null,
           allow: [
