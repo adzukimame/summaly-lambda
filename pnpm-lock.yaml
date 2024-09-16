@@ -21,15 +21,15 @@ importers:
         specifier: ^4.3.7
         version: 4.3.7
       hono:
-        specifier: ^4.5.11
-        version: 4.5.11
+        specifier: ^4.6.1
+        version: 4.6.1
       html-entities:
         specifier: ^2.5.2
         version: 2.5.2
     devDependencies:
       '@hono/node-server':
         specifier: ^1.12.2
-        version: 1.12.2(hono@4.5.11)
+        version: 1.12.2(hono@4.6.1)
       '@stylistic/eslint-plugin':
         specifier: ^2.7.2
         version: 2.7.2(eslint@9.10.0)(typescript@5.5.4)
@@ -1017,8 +1017,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hono@4.5.11:
-    resolution: {integrity: sha512-62FcjLPtjAFwISVBUshryl+vbHOjg8rE4uIK/dxyR8GpLztunZpwFmfEvmJCUI7xoGh/Sr3CGCDPCmYxVw7wUQ==}
+  hono@4.6.1:
+    resolution: {integrity: sha512-6NGwvttY1+HAFii08VYiEKI6ETPAFbpLntpm2M/MogEsAFWdZV74UNT+2M4bmqX90cIQhjlpBSP+tO+CfB0uww==}
     engines: {node: '>=16.0.0'}
 
   html-entities@2.3.2:
@@ -1748,9 +1748,9 @@ snapshots:
       - encoding
       - supports-color
 
-  '@hono/node-server@1.12.2(hono@4.5.11)':
+  '@hono/node-server@1.12.2(hono@4.6.1)':
     dependencies:
-      hono: 4.5.11
+      hono: 4.6.1
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
@@ -2532,7 +2532,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.5.11: {}
+  hono@4.6.1: {}
 
   html-entities@2.3.2: {}
 
