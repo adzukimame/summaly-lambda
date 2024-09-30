@@ -29,7 +29,7 @@
     "@misskey-dev/summaly": "^5.1.0",
     "cheerio": "1.0.0",
     "debug": "^4.3.7",
-    "hono": "^4.6.2",
+    "hono": "^4.6.3",
     "html-entities": "^2.5.2"
   },
   "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
