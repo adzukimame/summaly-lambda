@@ -15,14 +15,14 @@
   "devDependencies": {
     "@hono/node-server": "^1.13.7",
     "@stylistic/eslint-plugin": "^2.11.0",
-    "@types/aws-lambda": "^8.10.145",
-    "@types/node": "^20.17.6",
+    "@types/aws-lambda": "^8.10.146",
+    "@types/node": "^20.17.9",
     "esbuild": "^0.24.0",
     "eslint": "^9.15.0",
     "globals": "^15.12.0",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.17.0",
-    "vitest": "^2.1.5"
+    "vitest": "^2.1.8"
   },
   "dependencies": {
     "@googleapis/youtube": "^20.0.0",
