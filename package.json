@@ -16,7 +16,7 @@
     "@hono/node-server": "^1.13.7",
     "@stylistic/eslint-plugin": "^2.11.0",
     "@types/aws-lambda": "^8.10.146",
-    "@types/node": "^20.17.9",
+    "@types/node": "^20.17.10",
     "esbuild": "^0.24.0",
     "eslint": "^9.16.0",
     "globals": "^15.13.0",
