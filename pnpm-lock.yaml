@@ -28,8 +28,8 @@ importers:
         version: 2.5.2
     devDependencies:
       '@hono/node-server':
-        specifier: ^1.13.7
-        version: 1.13.7(hono@4.6.20)
+        specifier: ^1.13.8
+        version: 1.13.8(hono@4.6.20)
       '@stylistic/eslint-plugin':
         specifier: ^2.13.0
         version: 2.13.0(eslint@9.19.0)(typescript@5.7.3)
@@ -386,8 +386,8 @@ packages:
     resolution: {integrity: sha512-wdt1J0JoKYhvpoS2XIRHX0g/9ul/B0fQeeJAhuuBIdYINuuLt6/oZYZZCBmkuhtkA3IllXgqgAXOjLtLRAnR2g==}
     engines: {node: '>=12.0.0'}
 
-  '@hono/node-server@1.13.7':
-    resolution: {integrity: sha512-kTfUMsoloVKtRA2fLiGSd9qBddmru9KadNyhJCwgKBxTiNkaAJEwkVN9KV/rS4HtmmNRtUh6P+YpmjRMl0d9vQ==}
+  '@hono/node-server@1.13.8':
+    resolution: {integrity: sha512-fsn8ucecsAXUoVxrUil0m13kOEq4mkX4/4QozCqmY+HpGfKl74OYSn8JcMA8GnG0ClfdRI4/ZSeG7zhFaVg+wg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -1717,7 +1717,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@hono/node-server@1.13.7(hono@4.6.20)':
+  '@hono/node-server@1.13.8(hono@4.6.20)':
     dependencies:
       hono: 4.6.20
 
