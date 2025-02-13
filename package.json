@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@googleapis/youtube": "^20.0.0",
-    "@misskey-dev/summaly": "^5.1.0",
+    "@misskey-dev/summaly": "^5.2.0",
     "cheerio": "1.0.0",
     "debug": "^4.4.0",
     "hono": "^4.6.20",
