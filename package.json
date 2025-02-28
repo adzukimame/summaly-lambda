@@ -14,15 +14,15 @@
   },
   "devDependencies": {
     "@hono/node-server": "^1.13.8",
-    "@stylistic/eslint-plugin": "^4.0.1",
+    "@stylistic/eslint-plugin": "^4.1.0",
     "@types/aws-lambda": "^8.10.147",
-    "@types/node": "^22.13.5",
+    "@types/node": "^22.13.6",
     "esbuild": "^0.25.0",
-    "eslint": "^9.20.1",
+    "eslint": "^9.21.0",
     "globals": "^16.0.0",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.1",
-    "vitest": "^3.0.6"
+    "typescript-eslint": "^8.25.0",
+    "vitest": "^3.0.7"
   },
   "dependencies": {
     "@googleapis/youtube": "^20.0.0",
