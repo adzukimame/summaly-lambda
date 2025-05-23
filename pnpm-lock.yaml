@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@googleapis/youtube':
-        specifier: ^25.0.0
-        version: 25.0.0
+        specifier: ^25.1.0
+        version: 25.1.0
       '@misskey-dev/summaly':
         specifier: ^5.2.1
         version: 5.2.1
@@ -21,15 +21,15 @@ importers:
         specifier: ^4.4.1
         version: 4.4.1
       hono:
-        specifier: ^4.7.9
-        version: 4.7.9
+        specifier: ^4.7.10
+        version: 4.7.10
       html-entities:
         specifier: ^2.6.0
         version: 2.6.0
     devDependencies:
       '@hono/node-server':
         specifier: ^1.14.1
-        version: 1.14.1(hono@4.7.9)
+        version: 1.14.1(hono@4.7.10)
       '@stylistic/eslint-plugin':
         specifier: ^4.2.0
         version: 4.2.0(eslint@9.27.0)(typescript@5.8.3)
@@ -251,8 +251,8 @@ packages:
     resolution: {integrity: sha512-0J+zgWxHN+xXONWIyPWKFMgVuJoZuGiIFu8yxk7RJjxkzpGmyja5wRFqZIVtjDVOQpV+Rw0iOAjYPE2eQyjr0w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@googleapis/youtube@25.0.0':
-    resolution: {integrity: sha512-Duvx04LF2cJhskrJZ3d5l+R2lpsAE3aQwn1d8HhLSRcKdS5lBLlEIA33TN1KDl3Ern/57XLRQu6xfzCe56hD8w==}
+  '@googleapis/youtube@25.1.0':
+    resolution: {integrity: sha512-WqKYtgOWMyIuA9A5f1rAm6pu/dF69DIXZJaKimnB1mjxWu6hC/J7NpxhJFZitQNM91CHjm998F/I3y3+WMjRLg==}
     engines: {node: '>=12.0.0'}
 
   '@hono/node-server@1.14.1':
@@ -909,8 +909,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hono@4.7.9:
-    resolution: {integrity: sha512-/EsCoR5h7N4yu01TDu9GMCCJa6ZLk5ZJIWFFGNawAXmd1Tp53+Wir4xm0D2X19bbykWUlzQG0+BvPAji6p9E8Q==}
+  hono@4.7.10:
+    resolution: {integrity: sha512-QkACju9MiN59CKSY5JsGZCYmPZkA6sIW6OFCUp7qDjZu6S6KHtJHhAc9Uy9mV9F8PJ1/HQ3ybZF2yjCa/73fvQ==}
     engines: {node: '>=16.9.0'}
 
   html-entities@2.5.2:
@@ -1004,8 +1004,8 @@ packages:
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
 
-  jwa@2.0.0:
-    resolution: {integrity: sha512-jrZ2Qx916EA+fq9cEAeCROWPTfCwi1IVHqT2tapuqLEVVDKFDENFw1oL+MwrTvH6msKxsd1YTDVw6uKEcsrLEA==}
+  jwa@2.0.1:
+    resolution: {integrity: sha512-hRF04fqJIP8Abbkq5NKGN0Bbr3JxlQ+qhZufXVr0DvujKy93ZCbXZMHDL4EOtodSbCWxOqR8MS1tXA5hwqCXDg==}
 
   jws@4.0.0:
     resolution: {integrity: sha512-KDncfTmOZoOMTFG4mBlG0qUIOlc03fmzH+ru6RgYVZhPkyiy/92Owlt/8UEN+a4TXR1FQetfIpJE8ApdvdVxTg==}
@@ -1562,16 +1562,16 @@ snapshots:
       '@eslint/core': 0.14.0
       levn: 0.4.1
 
-  '@googleapis/youtube@25.0.0':
+  '@googleapis/youtube@25.1.0':
     dependencies:
       googleapis-common: 7.2.0
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  '@hono/node-server@1.14.1(hono@4.7.9)':
+  '@hono/node-server@1.14.1(hono@4.7.10)':
     dependencies:
-      hono: 4.7.9
+      hono: 4.7.10
 
   '@humanfs/core@0.19.1': {}
 
@@ -2320,7 +2320,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.7.9: {}
+  hono@4.7.10: {}
 
   html-entities@2.5.2: {}
 
@@ -2396,7 +2396,7 @@ snapshots:
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
-  jwa@2.0.0:
+  jwa@2.0.1:
     dependencies:
       buffer-equal-constant-time: 1.0.1
       ecdsa-sig-formatter: 1.0.11
@@ -2404,7 +2404,7 @@ snapshots:
 
   jws@4.0.0:
     dependencies:
-      jwa: 2.0.0
+      jwa: 2.0.1
       safe-buffer: 5.2.1
 
   keyv@4.5.4:
