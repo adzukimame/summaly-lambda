@@ -1,23 +1,38 @@
-import pluginJs from '@eslint/js';
-import tsEslint from 'typescript-eslint';
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
 import globals from 'globals';
 
-export default [
+export default tseslint.config(
   {
     files: ['**/*.{js,mjs,ts}'],
   },
-  stylistic.configs['recommended-flat'],
-  pluginJs.configs.recommended,
-  ...tsEslint.configs.recommended,
+  eslint.configs.recommended,
+  stylistic.configs.recommended,
+  tseslint.configs.stylisticTypeChecked,
+  {
+    files: ['**/*.{js,mjs,ts}'],
+    ignores: ['test/**/*.{js,mjs,ts}'],
+    extends: [
+      tseslint.configs.strictTypeChecked,
+    ],
+  },
   {
     languageOptions: {
-      globals: {
-        ...globals.node,
+      globals: globals.node,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
+  },
+  {
     rules: {
       'no-console': 'error',
+    },
+  },
+  {
+    rules: {
       '@stylistic/semi': ['error', 'always'],
       '@stylistic/comma-dangle': ['error', {
         arrays: 'always-multiline',
@@ -40,6 +55,10 @@ export default [
         },
         multilineDetection: 'brackets',
       }],
+    },
+  },
+  {
+    rules: {
       '@typescript-eslint/no-unused-vars': ['error', {
         args: 'all',
         argsIgnorePattern: '^_',
@@ -53,5 +72,5 @@ export default [
   },
   {
     ignores: ['built/*'],
-  },
-];
+  }
+);

@@ -7,15 +7,14 @@ import { youtube } from '@googleapis/youtube';
 import { load as cheerioLoad } from 'cheerio';
 import { decode as decodeHtml } from 'html-entities';
 import sjson from 'secure-json-parse';
+import { z } from 'zod/v4';
 
 let disabledHostnames: string[] = [];
 
 if (process.env['DISABLED_HOSTNAMES']) {
   try {
-    const parsed = sjson.parse(process.env['DISABLED_HOSTNAMES']);
-    if (Array.isArray(parsed)) {
-      disabledHostnames = parsed.filter(val => typeof val === 'string');
-    }
+    const parsed = z.array(z.unknown()).parse(sjson.parse(process.env['DISABLED_HOSTNAMES']));
+    disabledHostnames = parsed.filter(val => typeof val === 'string');
   }
   catch {
     // nop
@@ -23,7 +22,7 @@ if (process.env['DISABLED_HOSTNAMES']) {
 }
 
 function clip(s: string, max: number) {
-  if (s == null || s.trim() === '') {
+  if (s.trim() === '') {
     return s;
   }
 
@@ -37,7 +36,7 @@ const youtubeApiKey = process.env['YOUTUBE_API_KEY'];
 const plugins = [
   {
     test: (url: URL) => disabledHostnames.includes(url.hostname),
-    summarize: (_url: URL) => new Promise(resolve => resolve(null)),
+    summarize: (_url: URL) => new Promise((resolve) => { resolve(null); }),
   },
   {
     test: (url: URL) => ['youtube.com', 'www.youtube.com', 'music.youtube.com', 'youtu.be'].includes(url.hostname),
