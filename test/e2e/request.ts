@@ -29,7 +29,7 @@ describe('リクエストの', () => {
       const res = await app.request(`http://example.local/?url=${encodeURIComponent('https://example.com/')}`);
       expect(res.status).toBe(200);
       const json = await res.json();
-      expect(json.title).toBe('Example Domain');
+      expect(json).toHaveProperty('title', 'Example Domain');
     });
   });
 
@@ -38,7 +38,7 @@ describe('リクエストの', () => {
       const res = await app.request(`http://example.local/?url=${encodeURIComponent('https://example.org/')}`);
       expect(res.status).toBe(500);
       const json = await res.json();
-      expect(json.title).toBe(undefined);
+      expect(json).not.toHaveProperty('title');
     });
   });
 });
