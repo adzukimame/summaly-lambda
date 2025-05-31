@@ -69,13 +69,13 @@ const plugins = [
 
       const res = contentType === 'list'
         ? await yt.playlists.list({
-          id: [contentId],
-          part: ['snippet', 'player'],
-        })
+            id: [contentId],
+            part: ['snippet', 'player'],
+          })
         : await yt.videos.list({
-          id: [contentId],
-          part: ['snippet', 'player'],
-        });
+            id: [contentId],
+            part: ['snippet', 'player'],
+          });
 
       if (res.data.items === undefined || res.data.items.length === 0) {
         return null;
