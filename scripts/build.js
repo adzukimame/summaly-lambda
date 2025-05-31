@@ -1,3 +1,4 @@
+// @ts-check
 import esbuild from 'esbuild';
 
 await esbuild.build({
