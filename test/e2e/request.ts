@@ -1,11 +1,11 @@
 import { it, expect, describe, beforeAll } from 'vitest';
 
-process.env.DISABLED_HOSTNAMES = '["exapmle.org"]';
+process.env['DISABLED_HOSTNAMES'] = '["exapmle.org"]';
 
 import { app } from '../../src/index';
 
 beforeAll(() => {
-  process.env.DISABLED_HOSTNAMES = '["exapmle.org"]';
+  process.env['DISABLED_HOSTNAMES'] = '["exapmle.org"]';
 });
 
 describe('リクエストの', () => {
@@ -29,7 +29,7 @@ describe('リクエストの', () => {
       const res = await app.request(`http://example.local/?url=${encodeURIComponent('https://example.com/')}`);
       expect(res.status).toBe(200);
       const json = await res.json();
-      expect(json.title).toBe('Example Domain');
+      expect(json).toHaveProperty('title', 'Example Domain');
     });
   });
 
@@ -38,7 +38,7 @@ describe('リクエストの', () => {
       const res = await app.request(`http://example.local/?url=${encodeURIComponent('https://example.org/')}`);
       expect(res.status).toBe(500);
       const json = await res.json();
-      expect(json.title).toBe(undefined);
+      expect(json).not.toHaveProperty('title');
     });
   });
 });
@@ -47,7 +47,7 @@ describe('YouTubeの', () => {
   describe.each([
     { type: '通常の動画URL', url: 'https://www.youtube.com/watch?v=NMIEAhH_fTU' },
     { type: '動画の短縮URL', url: 'https://youtu.be/NMIEAhH_fTU' },
-  ])('$typeへのリクエストが', ({ _type, url }: { [x: string]: string }) => {
+  ])('$typeへのリクエストが', ({ url }) => {
     it('成功する', async () => {
       const res = await app.request(`http://example.local/?url=${encodeURIComponent(url)}`);
       expect(res.status).toBe(200);

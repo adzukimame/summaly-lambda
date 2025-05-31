@@ -1,13 +1,13 @@
-import * as fs from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 
 // esbuildでバンドルした結果ディレクトリ構造が変わるのでそのままだとreadFileSyncでエラーが発生する
 {
-  const content = fs.readFileSync('node_modules/@misskey-dev/summaly/built/utils/got.js');
+  const content = readFileSync('node_modules/@misskey-dev/summaly/built/utils/got.js', { encoding: 'utf8' });
 
   /* eslint-disable @stylistic/quotes */
-  fs.writeFileSync(
+  writeFileSync(
     'node_modules/@misskey-dev/summaly/built/utils/got.js',
-    content.toString('utf8').replace(
+    content.replace(
       "const repo = JSON.parse(readFileSync(`${_dirname}/../../package.json`, 'utf8'));",
       "const repo = { version: '5.1.0' };"
     )

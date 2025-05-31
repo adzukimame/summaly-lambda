@@ -6,15 +6,15 @@ import type { SummalyPlugin } from '@misskey-dev/summaly';
 import { youtube } from '@googleapis/youtube';
 import { load as cheerioLoad } from 'cheerio';
 import { decode as decodeHtml } from 'html-entities';
+import sjson from 'secure-json-parse';
+import { z } from 'zod/v4';
 
 let disabledHostnames: string[] = [];
 
-if (process.env.DISABLED_HOSTNAMES) {
+if (process.env['DISABLED_HOSTNAMES']) {
   try {
-    const parsed = JSON.parse(process.env.DISABLED_HOSTNAMES);
-    if (Array.isArray(parsed)) {
-      disabledHostnames = parsed.filter(val => typeof val === 'string');
-    }
+    const parsed = z.array(z.unknown()).parse(sjson.parse(process.env['DISABLED_HOSTNAMES']));
+    disabledHostnames = parsed.filter(val => typeof val === 'string');
   }
   catch {
     // nop
@@ -22,7 +22,7 @@ if (process.env.DISABLED_HOSTNAMES) {
 }
 
 function clip(s: string, max: number) {
-  if (s == null || s.trim() === '') {
+  if (s.trim() === '') {
     return s;
   }
 
@@ -31,12 +31,12 @@ function clip(s: string, max: number) {
   return s.length > max ? s.substring(0, max) + '...' : s;
 }
 
-const youtubeApiKey = process.env.YOUTUBE_API_KEY;
+const youtubeApiKey = process.env['YOUTUBE_API_KEY'];
 
 const plugins = [
   {
     test: (url: URL) => disabledHostnames.includes(url.hostname),
-    summarize: (_url: URL) => new Promise(resolve => resolve(null)),
+    summarize: (_url: URL) => new Promise((resolve) => { resolve(null); }),
   },
   {
     test: (url: URL) => ['youtube.com', 'www.youtube.com', 'music.youtube.com', 'youtu.be'].includes(url.hostname),
@@ -83,16 +83,16 @@ const plugins = [
 
       const detail = res.data.items[0];
 
-      const $ = detail.player?.embedHtml ? cheerioLoad(detail.player.embedHtml) : undefined;
+      const $ = detail?.player?.embedHtml ? cheerioLoad(detail.player.embedHtml) : undefined;
       const playerUrl = $ ? $('iframe').attr('src') : null;
       const playerWidth = $ ? $('iframe').attr('width') : null;
       const playerHeight = $ ? $('iframe').attr('height') : null;
 
       return {
-        title: detail.snippet?.title ? clip(decodeHtml(detail.snippet.title), 100) : null,
+        title: detail?.snippet?.title ? clip(decodeHtml(detail.snippet.title), 100) : null,
         icon: 'https://www.youtube.com/favicon.ico',
-        description: detail.snippet?.description ? clip(decodeHtml(detail.snippet.description.replace(/\n/g, '')), 157) : null,
-        thumbnail: detail.snippet?.thumbnails?.maxres?.url ?? null,
+        description: detail?.snippet?.description ? clip(decodeHtml(detail.snippet.description.replace(/\n/g, '')), 157) : null,
+        thumbnail: detail?.snippet?.thumbnails?.maxres?.url ?? null,
         player: {
           url: playerUrl
             ? playerUrl.startsWith('http://')
@@ -129,7 +129,7 @@ app.get('*', async (ctx) => {
 
   try {
     const summary = await summaly(url, {
-      lang: ctx.req.query('lang'),
+      lang: ctx.req.query('lang') ?? null,
       followRedirects: false,
       plugins,
     });
