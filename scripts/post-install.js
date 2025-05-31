@@ -1,4 +1,3 @@
-// @ts-check
 import { readFileSync, writeFileSync } from 'node:fs';
 
 // esbuildでバンドルした結果ディレクトリ構造が変わるのでそのままだとreadFileSyncでエラーが発生する
