@@ -1,5 +1,6 @@
 import { serve } from '@hono/node-server';
 
+// @ts-ignore
 const { app } = await import('../built/index.js');
 
 // eslint-disable-next-line no-console

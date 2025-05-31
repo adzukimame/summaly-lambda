@@ -12,7 +12,7 @@ export default tseslint.config(
   tseslint.configs.stylisticTypeChecked,
   {
     files: ['**/*.{js,mjs,ts}'],
-    ignores: ['test/**/*.{js,mjs,ts}'],
+    ignores: ['scripts/serve.js'],
     extends: [
       tseslint.configs.strictTypeChecked,
     ],
