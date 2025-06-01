@@ -1,13 +1,14 @@
 import type { Handler } from 'aws-lambda';
 import { Hono } from 'hono';
 import { handle } from 'hono/aws-lambda';
+import { zValidator } from '@hono/zod-validator';
+import { z } from 'zod/v4-mini';
 import { summaly } from '@misskey-dev/summaly';
 import type { SummalyPlugin } from '@misskey-dev/summaly';
 import { youtube } from '@googleapis/youtube';
 import { load as cheerioLoad } from 'cheerio';
 import { decode as decodeHtml } from 'html-entities';
 import sjson from 'secure-json-parse';
-import { z } from 'zod/v4';
 
 let disabledHostnames: string[] = [];
 
@@ -120,25 +121,27 @@ const plugins = [
 
 export const app = new Hono();
 
-app.get('*', async (ctx) => {
-  const url = ctx.req.query('url');
+app.get(
+  '*',
+  zValidator('query', z.object({
+    url: z.url({ error: issue => issue.input === undefined ? 'url is required' : 'malformed url' }),
+  })),
+  async (ctx) => {
+    const url = ctx.req.valid('query').url;
 
-  if (url === undefined || !URL.canParse(url)) {
-    return ctx.body('url is required', 400);
-  }
+    try {
+      const summary = await summaly(url, {
+        lang: ctx.req.query('lang') ?? null,
+        followRedirects: false,
+        plugins,
+      });
 
-  try {
-    const summary = await summaly(url, {
-      lang: ctx.req.query('lang') ?? null,
-      followRedirects: false,
-      plugins,
-    });
-
-    return ctx.json(summary);
+      return ctx.json(summary);
+    }
+    catch {
+      return ctx.json({ error: 'failed to create preview' }, 500);
+    }
   }
-  catch (e) {
-    return ctx.json({ error: e instanceof Error ? e.toString() : e }, 500);
-  }
-});
+);
 
 export const handler: Handler = handle(app);
