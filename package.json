@@ -14,16 +14,16 @@
   },
   "devDependencies": {
     "@hono/node-server": "^1.14.3",
-    "@stylistic/eslint-plugin": "^4.4.0",
+    "@stylistic/eslint-plugin": "^4.4.1",
     "@tsconfig/strictest": "^2.0.5",
     "@types/aws-lambda": "^8.10.149",
-    "@types/node": "^22.15.29",
+    "@types/node": "^22.15.30",
     "esbuild": "^0.25.5",
     "eslint": "^9.28.0",
     "globals": "^16.2.0",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.33.0",
-    "vitest": "^3.1.4"
+    "typescript-eslint": "^8.33.1",
+    "vitest": "^3.2.2"
   },
   "dependencies": {
     "@googleapis/youtube": "^25.1.0",
