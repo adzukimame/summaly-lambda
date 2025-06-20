@@ -13,7 +13,7 @@ importers:
         version: 26.0.1
       '@hono/zod-validator':
         specifier: ^0.7.0
-        version: 0.7.0(hono@4.7.11)(zod@3.25.64)
+        version: 0.7.0(hono@4.8.1)(zod@3.25.67)
       '@misskey-dev/summaly':
         specifier: ^5.2.1
         version: 5.2.1
@@ -24,8 +24,8 @@ importers:
         specifier: ^4.4.1
         version: 4.4.1
       hono:
-        specifier: ^4.7.11
-        version: 4.7.11
+        specifier: ^4.8.1
+        version: 4.8.1
       html-entities:
         specifier: ^2.6.0
         version: 2.6.0
@@ -33,12 +33,12 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       zod:
-        specifier: ^3.25.64
-        version: 3.25.64
+        specifier: ^3.25.67
+        version: 3.25.67
     devDependencies:
       '@hono/node-server':
         specifier: ^1.14.3
-        version: 1.14.3(hono@4.7.11)
+        version: 1.14.3(hono@4.8.1)
       '@stylistic/eslint-plugin':
         specifier: ^4.4.0
         version: 4.4.0(eslint@9.28.0)(typescript@5.8.3)
@@ -935,8 +935,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hono@4.7.11:
-    resolution: {integrity: sha512-rv0JMwC0KALbbmwJDEnxvQCeJh+xbS3KEWW5PC9cMJ08Ur9xgatI0HmtgYZfOdOSOeYsp5LO2cOhdI8cLEbDEQ==}
+  hono@4.8.1:
+    resolution: {integrity: sha512-ErA2ifywnSmcnB5XDuFqGDfXJ9xuAJR2C/8cZAk6vDaOCzofB8eNlha/wZWIiamREzWk94S9Z7wHsnKQHn7Niw==}
     engines: {node: '>=16.9.0'}
 
   html-entities@2.5.2:
@@ -1457,8 +1457,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@3.25.64:
-    resolution: {integrity: sha512-hbP9FpSZf7pkS7hRVUrOjhwKJNyampPgtXKc3AN6DsWtoHsg2Sb4SQaS4Tcay380zSwd2VPo9G9180emBACp5g==}
+  zod@3.25.67:
+    resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
 
 snapshots:
 
@@ -1589,14 +1589,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@hono/node-server@1.14.3(hono@4.7.11)':
+  '@hono/node-server@1.14.3(hono@4.8.1)':
     dependencies:
-      hono: 4.7.11
+      hono: 4.8.1
 
-  '@hono/zod-validator@0.7.0(hono@4.7.11)(zod@3.25.64)':
+  '@hono/zod-validator@0.7.0(hono@4.8.1)(zod@3.25.67)':
     dependencies:
-      hono: 4.7.11
-      zod: 3.25.64
+      hono: 4.8.1
+      zod: 3.25.67
 
   '@humanfs/core@0.19.1': {}
 
@@ -2345,7 +2345,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.7.11: {}
+  hono@4.8.1: {}
 
   html-entities@2.5.2: {}
 
@@ -2822,4 +2822,4 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod@3.25.64: {}
+  zod@3.25.67: {}
