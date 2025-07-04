@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@hono/node-server": "^1.15.0",
-    "@stylistic/eslint-plugin": "^4.4.0",
+    "@stylistic/eslint-plugin": "^5.1.0",
     "@tsconfig/strictest": "^2.0.5",
     "@types/aws-lambda": "^8.10.150",
     "@types/node": "^22.16.0",
