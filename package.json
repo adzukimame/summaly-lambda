@@ -26,7 +26,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@googleapis/youtube": "^26.0.1",
+    "@googleapis/youtube": "^27.0.1",
     "@hono/zod-validator": "^0.7.0",
     "@misskey-dev/summaly": "^5.2.1",
     "cheerio": "1.1.0",
