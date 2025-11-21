@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@googleapis/youtube": "^28.0.0",
-    "@hono/zod-validator": "^0.7.4",
+    "@hono/zod-validator": "^0.7.5",
     "@misskey-dev/summaly": "^5.2.5",
     "cheerio": "1.1.2",
     "debug": "^4.4.3",
