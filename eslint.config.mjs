@@ -3,20 +3,14 @@ import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
 import globals from 'globals';
 
-export default tseslint.config(
+export default [
   {
     files: ['**/*.{js,mjs,ts}'],
   },
   eslint.configs.recommended,
   stylistic.configs.recommended,
-  tseslint.configs.stylisticTypeChecked,
-  {
-    files: ['**/*.{js,mjs,ts}'],
-    ignores: ['scripts/serve.js'],
-    extends: [
-      tseslint.configs.strictTypeChecked,
-    ],
-  },
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
       globals: globals.node,
@@ -29,10 +23,6 @@ export default tseslint.config(
   {
     rules: {
       'no-console': 'error',
-    },
-  },
-  {
-    rules: {
       '@stylistic/semi': ['error', 'always'],
       '@stylistic/comma-dangle': ['error', {
         arrays: 'always-multiline',
@@ -55,10 +45,6 @@ export default tseslint.config(
         },
         multilineDetection: 'brackets',
       }],
-    },
-  },
-  {
-    rules: {
       '@typescript-eslint/no-unused-vars': ['error', {
         args: 'all',
         argsIgnorePattern: '^_',
@@ -72,5 +58,5 @@ export default tseslint.config(
   },
   {
     ignores: ['built/*'],
-  }
-);
+  },
+];
