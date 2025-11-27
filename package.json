@@ -14,15 +14,15 @@
   },
   "devDependencies": {
     "@hono/node-server": "^1.19.0",
-    "@stylistic/eslint-plugin": "^5.2.3",
-    "@tsconfig/strictest": "^2.0.5",
+    "@stylistic/eslint-plugin": "^5.6.1",
+    "@tsconfig/strictest": "^2.0.8",
     "@types/aws-lambda": "^8.10.152",
     "@types/node": "^22.18.0",
     "esbuild": "^0.25.9",
-    "eslint": "^9.34.0",
+    "eslint": "^9.39.1",
     "globals": "^16.3.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.41.0",
+    "typescript-eslint": "^8.48.0",
     "vitest": "^3.2.4"
   },
   "dependencies": {
