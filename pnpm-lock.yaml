@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@googleapis/youtube':
-        specifier: ^30.1.0
-        version: 30.1.0
+        specifier: ^30.2.0
+        version: 30.2.0
       '@hono/zod-validator':
         specifier: ^0.7.6
-        version: 0.7.6(hono@4.11.3)(zod@4.3.4)
+        version: 0.7.6(hono@4.11.3)(zod@4.3.5)
       '@misskey-dev/summaly':
         specifier: ^5.2.5
         version: 5.2.5
@@ -33,8 +33,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       zod:
-        specifier: ^4.3.4
-        version: 4.3.4
+        specifier: ^4.3.5
+        version: 4.3.5
     devDependencies:
       '@hono/node-server':
         specifier: ^1.19.7
@@ -275,8 +275,8 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@googleapis/youtube@30.1.0':
-    resolution: {integrity: sha512-GytrDRYp1SuOwmFwUvHui0mGrr+jsnWynM1RTNHlSkvozSmxmBgc+QzWVJheg94DoMoeXzRnvslJLoPeHf4rpg==}
+  '@googleapis/youtube@30.2.0':
+    resolution: {integrity: sha512-magOuTRMZegaUHy1oYftZiipmLvJVRuZqZkXD2ls3QPAjWvc/+aILT3yY2HlDHF8Va93GVeow/ZIzMNoVJsQlA==}
     engines: {node: '>=12.0.0'}
 
   '@hono/node-server@1.19.7':
@@ -1214,8 +1214,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  qs@6.14.0:
-    resolution: {integrity: sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w==}
+  qs@6.14.1:
+    resolution: {integrity: sha512-4EK3+xJl8Ts67nLYNwqw/dsFVnCf+qR7RgXSK9jEEm9unao3njwMDdmsdvoKBKHzxd7tCYz5e5M+SnMjdtXGQQ==}
     engines: {node: '>=0.6'}
 
   quick-lru@5.1.1:
@@ -1492,8 +1492,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@4.3.4:
-    resolution: {integrity: sha512-Zw/uYiiyF6pUT1qmKbZziChgNPRu+ZRneAsMUDU6IwmXdWt5JwcUfy2bvLOCUtz5UniaN/Zx5aFttZYbYc7O/A==}
+  zod@4.3.5:
+    resolution: {integrity: sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g==}
 
 snapshots:
 
@@ -1628,7 +1628,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@googleapis/youtube@30.1.0':
+  '@googleapis/youtube@30.2.0':
     dependencies:
       googleapis-common: 8.0.1
     transitivePeerDependencies:
@@ -1638,10 +1638,10 @@ snapshots:
     dependencies:
       hono: 4.11.3
 
-  '@hono/zod-validator@0.7.6(hono@4.11.3)(zod@4.3.4)':
+  '@hono/zod-validator@0.7.6(hono@4.11.3)(zod@4.3.5)':
     dependencies:
       hono: 4.11.3
-      zod: 4.3.4
+      zod: 4.3.5
 
   '@humanfs/core@0.19.1': {}
 
@@ -2342,7 +2342,7 @@ snapshots:
       extend: 3.0.2
       gaxios: 7.1.3
       google-auth-library: 10.5.0
-      qs: 6.14.0
+      qs: 6.14.1
       url-template: 2.0.8
     transitivePeerDependencies:
       - supports-color
@@ -2609,7 +2609,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  qs@6.14.0:
+  qs@6.14.1:
     dependencies:
       side-channel: 1.1.0
 
@@ -2863,4 +2863,4 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod@4.3.4: {}
+  zod@4.3.5: {}
