@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@googleapis/youtube':
-        specifier: ^30.2.0
-        version: 30.2.0
+        specifier: ^30.3.0
+        version: 30.3.0
       '@hono/zod-validator':
         specifier: ^0.7.6
         version: 0.7.6(hono@4.11.4)(zod@4.3.5)
@@ -275,8 +275,8 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@googleapis/youtube@30.2.0':
-    resolution: {integrity: sha512-magOuTRMZegaUHy1oYftZiipmLvJVRuZqZkXD2ls3QPAjWvc/+aILT3yY2HlDHF8Va93GVeow/ZIzMNoVJsQlA==}
+  '@googleapis/youtube@30.3.0':
+    resolution: {integrity: sha512-POrCCTkDVQWpBOq5UOfG4Bk03axgSnG0CnYEnssHKJX3idcWF/P6fK3LrOTdzE+/0pWzWqIWcmxUdgVETfuxIg==}
     engines: {node: '>=12.0.0'}
 
   '@hono/node-server@1.19.8':
@@ -1632,7 +1632,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@googleapis/youtube@30.2.0':
+  '@googleapis/youtube@30.3.0':
     dependencies:
       googleapis-common: 8.0.1
     transitivePeerDependencies:
