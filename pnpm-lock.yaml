@@ -13,7 +13,7 @@ importers:
         version: 31.0.0
       '@hono/zod-validator':
         specifier: ^0.7.6
-        version: 0.7.6(hono@4.12.0)(zod@4.3.6)
+        version: 0.7.6(hono@4.12.3)(zod@4.3.6)
       '@misskey-dev/summaly':
         specifier: ^5.2.5
         version: 5.2.5
@@ -24,8 +24,8 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
       hono:
-        specifier: ^4.12.0
-        version: 4.12.0
+        specifier: ^4.12.3
+        version: 4.12.3
       html-entities:
         specifier: ^2.6.0
         version: 2.6.0
@@ -38,7 +38,7 @@ importers:
     devDependencies:
       '@hono/node-server':
         specifier: ^1.19.9
-        version: 1.19.9(hono@4.12.0)
+        version: 1.19.9(hono@4.12.3)
       '@stylistic/eslint-plugin':
         specifier: ^5.9.0
         version: 5.9.0(eslint@9.39.2)
@@ -983,8 +983,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hono@4.12.0:
-    resolution: {integrity: sha512-NekXntS5M94pUfiVZ8oXXK/kkri+5WpX2/Ik+LVsl+uvw+soj4roXIsPqO+XsWrAw20mOzaXOZf3Q7PfB9A/IA==}
+  hono@4.12.3:
+    resolution: {integrity: sha512-SFsVSjp8sj5UumXOOFlkZOG6XS9SJDKw0TbwFeV+AJ8xlST8kxK5Z/5EYa111UY8732lK2S/xB653ceuaoGwpg==}
     engines: {node: '>=16.9.0'}
 
   html-entities@2.6.0:
@@ -1658,13 +1658,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@hono/node-server@1.19.9(hono@4.12.0)':
+  '@hono/node-server@1.19.9(hono@4.12.3)':
     dependencies:
-      hono: 4.12.0
+      hono: 4.12.3
 
-  '@hono/zod-validator@0.7.6(hono@4.12.0)(zod@4.3.6)':
+  '@hono/zod-validator@0.7.6(hono@4.12.3)(zod@4.3.6)':
     dependencies:
-      hono: 4.12.0
+      hono: 4.12.3
       zod: 4.3.6
 
   '@humanfs/core@0.19.1': {}
@@ -2428,7 +2428,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.12.0: {}
+  hono@4.12.3: {}
 
   html-entities@2.6.0: {}
 
