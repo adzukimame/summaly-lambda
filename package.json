@@ -16,13 +16,13 @@
     "@hono/node-server": "^1.19.9",
     "@stylistic/eslint-plugin": "^5.9.0",
     "@tsconfig/strictest": "^2.0.8",
-    "@types/aws-lambda": "^8.10.160",
-    "@types/node": "^22.19.11",
+    "@types/aws-lambda": "^8.10.161",
+    "@types/node": "^22.19.13",
     "esbuild": "^0.27.3",
     "eslint": "^9.39.2",
     "globals": "^17.3.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.0",
+    "typescript-eslint": "^8.56.1",
     "vitest": "^4.0.18"
   },
   "dependencies": {
