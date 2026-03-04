@@ -37,8 +37,8 @@ importers:
         version: 4.3.6
     devDependencies:
       '@hono/node-server':
-        specifier: ^1.19.9
-        version: 1.19.9(hono@4.12.4)
+        specifier: ^1.19.10
+        version: 1.19.10(hono@4.12.4)
       '@stylistic/eslint-plugin':
         specifier: ^5.9.0
         version: 5.9.0(eslint@9.39.2)
@@ -279,8 +279,8 @@ packages:
     resolution: {integrity: sha512-xXgg1yl+C426d/4qrHs+fOu76ftfR1AH5CofpFPEdA9tPOx0C4ky0TJ9XBO5MUrrVMR7W5KmopUZX5tTP6ug5Q==}
     engines: {node: '>=12.0.0'}
 
-  '@hono/node-server@1.19.9':
-    resolution: {integrity: sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw==}
+  '@hono/node-server@1.19.10':
+    resolution: {integrity: sha512-hZ7nOssGqRgyV3FVVQdfi+U4q02uB23bpnYpdvNXkYTRRyWx84b7yf1ans+dnJ/7h41sGL3CeQTfO+ZGxuO+Iw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -1674,7 +1674,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@hono/node-server@1.19.9(hono@4.12.4)':
+  '@hono/node-server@1.19.10(hono@4.12.4)':
     dependencies:
       hono: 4.12.4
 
