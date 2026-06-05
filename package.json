@@ -22,8 +22,8 @@
     "eslint": "^9.39.2",
     "globals": "^17.6.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.60.0",
-    "vitest": "^4.1.7"
+    "typescript-eslint": "^8.60.1",
+    "vitest": "^4.1.8"
   },
   "dependencies": {
     "@googleapis/youtube": "^31.0.0",
