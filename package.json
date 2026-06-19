@@ -13,7 +13,7 @@
     "deploy": "pnpm run build && zip -FS -r function.zip built package.json && aws lambda update-function-code --function-name summaly-lambda --zip-file fileb://function.zip --architectures arm64 --no-cli-pager"
   },
   "devDependencies": {
-    "@hono/node-server": "^2.0.4",
+    "@hono/node-server": "^2.0.5",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@tsconfig/strictest": "^2.0.8",
     "@types/aws-lambda": "^8.10.162",
@@ -22,8 +22,8 @@
     "eslint": "^9.39.2",
     "globals": "^17.6.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.61.0",
-    "vitest": "^4.1.8"
+    "typescript-eslint": "^8.61.1",
+    "vitest": "^4.1.9"
   },
   "dependencies": {
     "@googleapis/youtube": "^31.0.0",
