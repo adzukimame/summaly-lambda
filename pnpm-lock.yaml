@@ -13,7 +13,7 @@ importers:
         version: 33.0.0
       '@hono/zod-validator':
         specifier: ^0.7.6
-        version: 0.7.6(hono@4.12.25)(zod@4.4.2)
+        version: 0.7.6(hono@4.12.27)(zod@4.4.2)
       '@misskey-dev/summaly':
         specifier: ^5.2.5
         version: 5.2.5
@@ -24,8 +24,8 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
       hono:
-        specifier: ^4.12.25
-        version: 4.12.25
+        specifier: ^4.12.27
+        version: 4.12.27
       html-entities:
         specifier: ^2.6.0
         version: 2.6.0
@@ -38,7 +38,7 @@ importers:
     devDependencies:
       '@hono/node-server':
         specifier: ^2.0.8
-        version: 2.0.8(hono@4.12.25)
+        version: 2.0.8(hono@4.12.27)
       '@stylistic/eslint-plugin':
         specifier: ^5.10.0
         version: 5.10.0(eslint@9.39.2)
@@ -1162,8 +1162,8 @@ packages:
     resolution: {integrity: sha512-T2UbfbBEF32wiepXIsMlTW9+dDYC6wMh/t/vYA4tuOMKqWz/n3vr1NFSxQiyP+zk2mXsoMA/i/7qV6LKut1t1A==}
     engines: {node: '>= 0.4'}
 
-  hono@4.12.25:
-    resolution: {integrity: sha512-2NFaIyNVgJmBs/ecmtGzlmluTFs5cHEWGTdu0t1HBwYzoGXOL5nUQBRMXsXWla5i4KkG//QMzVP88m1+I3fdAQ==}
+  hono@4.12.27:
+    resolution: {integrity: sha512-1yrb/+w6HWQJrUCLkJ2IF5jNIPvvFkblV5RNOYl6bV+OA6p9GLcMpHFFGTosSvHvcAUibuUukRqhlYI4z32C7Q==}
     engines: {node: '>=16.9.0'}
 
   html-entities@2.6.0:
@@ -1316,8 +1316,8 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  nanoid@3.3.15:
-    resolution: {integrity: sha512-y7Wygv/7mEOvxTuEQDB8StXdMRBWf1kR/tlhAzBRUFkB2jfcLOAxO/SHmOO2zgz1pVgK29/kyupn059/bCHdjA==}
+  nanoid@3.3.16:
+    resolution: {integrity: sha512-bzlKTyNJ7+LdGIIwy8ijFpIqEQIvafahV7eYykJ8Cvh42EdJeODoJ6gUJXpQJvej1BddH8OqTXZNE/KfbWAu8Q==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -1410,8 +1410,8 @@ packages:
     resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
     engines: {node: '>=12'}
 
-  postcss@8.5.16:
-    resolution: {integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==}
+  postcss@8.5.22:
+    resolution: {integrity: sha512-KBDEIpLrvpv16pp3K0Fw+UCoZfopFjjgeB+0tA/aaThfEE74kKDLrgg603YvOWJyg3+WYtyq3xYsQWsIyZlPqQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -1931,13 +1931,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@hono/node-server@2.0.8(hono@4.12.25)':
+  '@hono/node-server@2.0.8(hono@4.12.27)':
     dependencies:
-      hono: 4.12.25
+      hono: 4.12.27
 
-  '@hono/zod-validator@0.7.6(hono@4.12.25)(zod@4.4.2)':
+  '@hono/zod-validator@0.7.6(hono@4.12.27)(zod@4.4.2)':
     dependencies:
-      hono: 4.12.25
+      hono: 4.12.27
       zod: 4.4.2
 
   '@humanfs/core@0.19.1': {}
@@ -2745,7 +2745,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.12.25: {}
+  hono@4.12.27: {}
 
   html-entities@2.6.0: {}
 
@@ -2885,7 +2885,7 @@ snapshots:
 
   ms@2.1.3: {}
 
-  nanoid@3.3.15: {}
+  nanoid@3.3.16: {}
 
   natural-compare@1.4.0: {}
 
@@ -2964,9 +2964,9 @@ snapshots:
 
   picomatch@4.0.5: {}
 
-  postcss@8.5.16:
+  postcss@8.5.22:
     dependencies:
-      nanoid: 3.3.15
+      nanoid: 3.3.16
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -3162,7 +3162,7 @@ snapshots:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.5)
       picomatch: 4.0.5
-      postcss: 8.5.16
+      postcss: 8.5.22
       rollup: 4.62.2
       tinyglobby: 0.2.17
     optionalDependencies:
