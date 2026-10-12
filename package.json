@@ -23,7 +23,7 @@
     "globals": "^17.7.0",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.63.0",
-    "vitest": "^4.1.10"
+    "vitest": "^5.0.4"
   },
   "dependencies": {
     "@googleapis/youtube": "^33.0.0",
